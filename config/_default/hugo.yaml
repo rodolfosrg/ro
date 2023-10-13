@@ -1,0 +1,88 @@
+baseURL: 'http://example.org/'
+copyright: '{year}'
+theme: lowkey
+title: Ro
+enableRobotsTXT: true
+languageCode: en-US
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    contentDir: content/en
+    languageCode: en-US
+    languageName: English
+    menu: 
+      main:
+        - identifier: me
+          name: About me
+          pageRef: /
+          weight: 1
+        - identifier: worship
+          name: Worship
+          pageRef: /worship
+          weight: 2
+        - identifier: leadership
+          name: Leadership
+          pageRef: /leadership
+          weight: 3
+        - identifier: dev
+          name: Software Development
+          pageRef: /dev
+          weight: 4
+      social:
+        - identifier: linkedin
+          name: LinkedIn
+          url: 'https://www.linkedin.com/in/rodolfosrg'
+          weight: 1
+        - identifier: email
+          name: Send me an email
+          url: 'mailto:rodolfosrg@gmail.com'
+          weight: 2
+    weight: 1
+  es:
+    contentDir: content/es
+    languageCode: es-GT
+    languageName: Español
+    menu: 
+      main:
+        - identifier: me
+          name: Acerca de mí
+          pageRef: /
+          weight: 1
+        - identifier: worship
+          name: Alabanza
+          pageRef: /worship
+          weight: 2
+        - identifier: leadership
+          name: Liderazgo
+          pageRef: /leadership
+          weight: 3
+        - identifier: dev
+          name: Programación
+          pageRef: /dev
+          weight: 4
+      social:
+        - identifier: linkedin
+          name: LinkedIn
+          url: 'https://www.linkedin.com/in/rodolfosrg'
+          weight: 1
+        - identifier: email
+          name: Envíame un email
+          url: 'mailto:rodolfosrg@gmail.com'
+          weight: 2
+    weight: 2
+
+summaryLength: 15
+paginate: 5
+
+markup:
+  highlight:
+    codeFences: false
+    guessSyntax: false
+    hl_Lines: ''
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: false
+    tabWidth: 4
+    noClasses: false

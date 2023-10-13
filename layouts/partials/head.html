@@ -1,0 +1,11 @@
+{{- partial "head/meta.html" . -}}
+{{- partial "head/styles.html" . -}}
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;1,6..12,400;1,6..12,600&display=swap');
+</style>
+
+{{ $style := resources.Get "css/overrides.css" }}
+{{ $favicon := resources.Get "icons/favicon.png" }}
+<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="{{ $favicon.RelPermalink }}">

@@ -1,0 +1,43 @@
+html {
+    font-family: 'Nunito Sans', sans-serif;
+}
+main {
+    opacity: 0;
+    animation: fadeIn ease-out 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.content blockquote {
+    border: unset;
+    margin: unset;
+    font-size: 1.125rem;
+    font-style: italic;
+}
+.wave-emoji {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave 2s forwards;
+}
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+        font-size: 1em;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate(20deg);
+        font-size: 2em;
+        margin-right: 0.3em;
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(0deg);
+        font-size: 2em;
+        margin-right: 0.3em;
+    }
+}

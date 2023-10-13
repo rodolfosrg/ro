@@ -1,0 +1,12 @@
+isSinglePage: true
+description: Hello
+avatar: img/pp.png
+disqusShortname: ''
+emoji:
+  enableEmoji: true
+giscus:
+  enable: false
+  repo: ''
+  repoId: ''
+  category: Announcements
+  categoryId: ''
