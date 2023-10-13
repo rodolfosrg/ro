@@ -1,13 +1,12 @@
 <div class="flex flex-col gap-5" style="margin: 6px 0 auto auto; font-size: 0.8em;">
     <span>
-        {{ $baseURL := .Page.RelPermalink }}
+        {{ $relLink := .Page.Permalink }}
         {{ if eq site.LanguageCode "en-US" }}
-            <a href="/es{{ $baseURL }}">Español</a>
+            {{ $relLink = replace $relLink .Site.BaseURL (printf "%s%s" .Site.BaseURL "/es/") }}
+            <a href="{{ $relLink }}">Español</a>
         {{ else }}
-            {{ if ge (len .Page.RelPermalink) 4 }}
-                {{ $baseURL = slicestr .Page.RelPermalink 3 }}
-            {{end}}
-            <a href="{{ $baseURL }}">English</a>
+            {{ $relLink = replace $relLink "/es/" "/" }}
+            <a href="{{ $relLink }}">English</a>
         {{ end }}
     </span>
 </div>
