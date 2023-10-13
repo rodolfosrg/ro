@@ -1,6 +1,8 @@
 <div class="flex flex-col gap-5" style="margin: 6px 0 auto auto; font-size: 0.8em;">
     <span>
+        <script> console.log("baseurl {{.Site.BaseURL}}") </script>
         {{ $relLink := .Page.Permalink }}
+        <script> console.log("rellink {{ $relLink }}") </script>
         {{ if eq site.LanguageCode "en-US" }}
             {{ $relLink = replace $relLink .Site.BaseURL (printf "%s%s" .Site.BaseURL "/es/") }}
             <a href="{{ $relLink }}">Español</a>
