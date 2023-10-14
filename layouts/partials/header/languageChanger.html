@@ -1,24 +1,17 @@
-<script>
-    console.log(`     _______________________________________
-    |  | | | |  |  | | | | | |  |  | | | |  |
-    |  | | | |  |  | | | | | |  |  | | | |  |
-    |  | | | |  |  | | | | | |  |  | | | |  |
-    |  |_| |_|  |  |_| |_| |_|  |  |_| |_|  |
-    |   |   |   |   |   |   |   |   |   |   |
-    |   |   |   |   |   |   |   |   |   |   |
-    |___|___|___|___|___|___|___|___|___|___|
-
-      🎶 Sing to the Lord a new song, 
-           for He has done marvelous things!`)</script>
-<div class="flex flex-col gap-5" style="margin: 6px 0 auto auto; font-size: 0.8em;">
-    <span>
-        {{ $relLink := .Page.Permalink }}
-        {{ if eq site.LanguageCode "en-US" }}
-            {{ $relLink = replace $relLink .Site.BaseURL (printf "%s%s" .Site.BaseURL "es/") }}
-            <a href="{{ $relLink }}">Español</a>
-        {{ else }}
-            {{ $relLink = replace $relLink "/es/" "/" }}
-            <a href="{{ $relLink }}">English</a>
-        {{ end }}
-    </span>
-</div>
+<span style="
+    top: 89px; 
+    position: relative; 
+    font-size: 0.8em; 
+    margin-left: auto;
+    width: fit-content;
+    display: block;"
+>
+    {{ $relLink := .Page.Permalink }}
+    {{ if eq site.LanguageCode "en-US" }}
+        {{ $relLink = replace $relLink .Site.BaseURL (printf "%s%s" .Site.BaseURL "es/") }}
+        <a href="{{ $relLink }}">Español</a>
+    {{ else }}
+        {{ $relLink = replace $relLink "/es/" "/" }}
+        <a href="{{ $relLink }}">English</a>
+    {{ end }}
+</span>
